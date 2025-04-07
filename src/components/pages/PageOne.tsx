@@ -1,6 +1,6 @@
-import adidasModel1 from './../../assets/adidasModel1.webp'
-import adidasModel2 from './../../assets/adidasModel2.webp'
-import adidasModel3 from './../../assets/adidasModel3.webp'
+import adidasModel1 from './../../assets/adidas/adidasModel1.webp'
+import adidasModel2 from './../../assets/adidas/adidasModel2.webp'
+import adidasModel3 from './../../assets/adidas/adidasModel3.webp'
 import {Link} from 'react-router-dom';
 
 
