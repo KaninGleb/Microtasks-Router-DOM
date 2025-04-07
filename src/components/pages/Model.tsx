@@ -1,14 +1,14 @@
 import {useParams} from 'react-router-dom';
-import {adidasArr, AdidasItem} from './PageOne.tsx';
+import {adidasModulesState, AdidasModelType} from './Adidas.tsx';
 import {pumaModelsState, PumaModelType} from './Puma.tsx';
 
 
 type CrossModalType = {
-  [key: string]: (AdidasItem[] | PumaModelType[]);
+  [key: string]: (AdidasModelType[] | PumaModelType[]);
 }
 
 const crossModal: CrossModalType = {
-  adidas: adidasArr,
+  adidas: adidasModulesState,
   puma: pumaModelsState,
 }
 
@@ -40,7 +40,7 @@ export const Model = () => {
           <img
             src={currentModel?.picture}
             alt={currentModel?.model}
-            style={{width: '600px', height: 'auto'}}
+            style={{width: '600px', height: 'auto', marginBottom: '220px'}}
           />
         </div>
       ) : (

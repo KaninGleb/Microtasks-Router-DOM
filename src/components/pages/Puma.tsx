@@ -1,7 +1,7 @@
+import {Link} from 'react-router-dom';
 import pumaModel1 from './../../assets/puma/pumaModel1.jpg'
 import pumaModel2 from './../../assets/puma/pumaModel2.jpg'
 import pumaModel3 from './../../assets/puma/pumaModel3.jpg'
-import {Link} from 'react-router-dom';
 
 
 export type PumaModelType = {
@@ -16,24 +16,24 @@ export const pumaModelsState: PumaModelType[] = [
   {
     id: 11,
     model: 'PUMA ADIFOM TRXN',
-    collection: 'new collection1',
-    price: '100200$',
-    picture: pumaModel1
+    collection: 'Spring/Summer 2023',
+    price: '$110.00',
+    picture: pumaModel1,
   },
   {
     id: 22,
     model: 'PUMA ADIFOM SUPER',
-    collection: 'new collection22',
-    price: '200300$',
-    picture: pumaModel2
+    collection: 'Autumn/Winter 2023',
+    price: '$130.00',
+    picture: pumaModel2,
   },
   {
     id: 33,
     model: 'PUMA SUPER SUPERSKI',
-    collection: 'new collection333',
-    price: '300400$',
-    picture: pumaModel3
-  }
+    collection: 'Limited Edition',
+    price: '$160.00',
+    picture: pumaModel3,
+  },
 ]
 
 export const Puma = () => {
@@ -46,7 +46,7 @@ export const Puma = () => {
               <img
                 src={model.picture}
                 alt={model.model}
-                style={{width: '300px', height: 'auto'}}
+                style={{width: '350px', height: 'auto'}}
               />
             </Link>
           )

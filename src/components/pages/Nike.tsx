@@ -1,6 +1,6 @@
 
 
-export const PageThree = () => {
+export const Nike = () => {
     return (
         <div>
             <h2>ABIBAS</h2>

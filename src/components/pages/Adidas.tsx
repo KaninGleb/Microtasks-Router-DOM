@@ -1,10 +1,10 @@
+import {Link} from 'react-router-dom';
 import adidasModel1 from './../../assets/adidas/adidasModel1.webp'
 import adidasModel2 from './../../assets/adidas/adidasModel2.webp'
 import adidasModel3 from './../../assets/adidas/adidasModel3.webp'
-import {Link} from 'react-router-dom';
 
 
-export type AdidasItem = {
+export type AdidasModelType = {
   id: number
   model: string
   collection: string
@@ -12,41 +12,41 @@ export type AdidasItem = {
   picture: string
 }
 
-export const adidasArr: AdidasItem[] = [
+export const adidasModulesState: AdidasModelType[] = [
   {
     id: 1,
     model: 'ADIDAS ADIFOM TRXN',
-    collection: 'new collection1',
-    price: '100200$',
+    collection: 'Spring/Summer 2023',
+    price: '$100.00',
     picture: adidasModel1,
   },
   {
     id: 2,
     model: 'ADIDAS ADIFOM SUPER',
-    collection: 'new collection22',
-    price: '200300$',
-    picture: adidasModel2
+    collection: 'Autumn/Winter 2023',
+    price: '$120.00',
+    picture: adidasModel2,
   },
   {
     id: 3,
     model: 'ADIDAS SUPER SUPERSKI',
-    collection: 'new collection333',
-    price: '300400$',
-    picture: adidasModel3
+    collection: 'Limited Edition',
+    price: '$150.00',
+    picture: adidasModel3,
   }
 ]
 
-export const PageOne = () => {
+export const Adidas = () => {
   return (
     <div>
       <h2 style={{textAlign: 'center'}}> ADIDAS</h2>
       <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
-        {adidasArr.map(model => (
+        {adidasModulesState.map(model => (
           <Link key={model.id} to={`/adidas/${model.id}`}>
             <img
               src={model.picture}
               alt={model.model}
-              style={{width: '300px', height: 'auto'}}
+              style={{width: '350px', height: 'auto'}}
               />
           </Link>
           )
