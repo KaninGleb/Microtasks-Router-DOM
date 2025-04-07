@@ -1,24 +1,45 @@
 import {useParams} from 'react-router-dom';
-import {adidasArr} from './PageOne.tsx';
+import {adidasArr, AdidasItem} from './PageOne.tsx';
+import {pumaModelsState, PumaModelType} from './Puma.tsx';
 
+
+type CrossModalType = {
+  [key: string]: (AdidasItem[] | PumaModelType[]);
+}
+
+const crossModal: CrossModalType = {
+  adidas: adidasArr,
+  puma: pumaModelsState,
+}
 
 export const Model = () => {
-  const params = useParams();
-  const currModel = adidasArr.find(model => model.id === Number(params.id));
+  // const params = useParams();
+  const { id, model } = useParams();
 
-  console.log(params);
+  const currentModel = model && crossModal[model]
+    ? crossModal[model].find(item => item.id === Number(id))
+    : null;
+
+  console.log(
+    'id:', id,
+    '-',
+    'model:', model
+  );
+
+  // const location = useLocation();
+  // const isAdidas = location.pathname.includes('/adidas/');
 
   return (
     <>
-      {currModel ? (
+      {currentModel ? (
         <div style={{textAlign: 'center'}}>
-          <h2>{currModel.model}</h2>
-          <h4>{currModel.collection}</h4>
-          <h3>{currModel.price}</h3>
+          <h2>{currentModel?.model}</h2>
+          <h4>{currentModel?.collection}</h4>
+          <h3>{currentModel?.price}</h3>
 
           <img
-            src={currModel.picture}
-            alt={currModel.model}
+            src={currentModel?.picture}
+            alt={currentModel?.model}
             style={{width: '600px', height: 'auto'}}
           />
         </div>

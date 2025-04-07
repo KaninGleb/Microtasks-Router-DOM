@@ -4,7 +4,7 @@ import pumaModel3 from './../../assets/puma/pumaModel3.jpg'
 import {Link} from 'react-router-dom';
 
 
-export type PumaItem = {
+export type PumaModelType = {
   id: number
   model: string
   collection: string
@@ -12,24 +12,24 @@ export type PumaItem = {
   picture: string
 }
 
-export const pumaArray: PumaItem[] = [
+export const pumaModelsState: PumaModelType[] = [
   {
-    id: 1,
-    model: 'ADIDAS ADIFOM TRXN',
+    id: 11,
+    model: 'PUMA ADIFOM TRXN',
     collection: 'new collection1',
     price: '100200$',
     picture: pumaModel1
   },
   {
-    id: 2,
-    model: 'ADIDAS ADIFOM SUPER',
+    id: 22,
+    model: 'PUMA ADIFOM SUPER',
     collection: 'new collection22',
     price: '200300$',
     picture: pumaModel2
   },
   {
-    id: 3,
-    model: 'ADIDAS SUPER SUPERSKI',
+    id: 33,
+    model: 'PUMA SUPER SUPERSKI',
     collection: 'new collection333',
     price: '300400$',
     picture: pumaModel3
@@ -41,8 +41,8 @@ export const Puma = () => {
     <div>
       <h2 style={{textAlign: 'center'}}>PUMA</h2>
       <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
-        {pumaArray.map(model => (
-            <Link key={model.id} to={`/adidas/${model.id}`}>
+        {pumaModelsState.map(model => (
+            <Link key={model.id} to={`/puma/${model.id}`}>
               <img
                 src={model.picture}
                 alt={model.model}

@@ -1,10 +1,10 @@
 import {Navigate, NavLink, Route, Routes} from 'react-router';
 import {PageOne} from './components/pages/PageOne.tsx';
-import {PageTwo} from './components/pages/PageTwo.tsx';
 import {PageThree} from './components/pages/PageThree.tsx';
 import {Error404} from './components/pages/Error404.tsx';
 import {S} from './components/pages/_styles.ts';
 import {Model} from './components/pages/Model.tsx';
+import {Puma} from './components/pages/Puma.tsx';
 
 
 export const PATH = {
@@ -34,10 +34,13 @@ function App() {
             <Route path={PATH.HOME} element={ <Navigate to={PATH.PAGE1}/> }/>
 
             <Route path={PATH.PAGE1} element={<PageOne/>}/>
-            <Route path={PATH.PAGE2} element={<PageTwo/>}/>
+            <Route path={PATH.PAGE2} element={<Puma/>}/>
             <Route path={PATH.PAGE3} element={<PageThree/>}/>
 
-            <Route path={'/adidas/:id'} element={<Model/>}/>
+            <Route path={'/:model/:id'} element={<Model/>}/>
+
+            {/*<Route path={'/puma/:id'} element={<Model/>}/>*/}
+
             {/*<Route path={'/adidas/*'} element={<Error404/>}/>*/}
 
             {/*<Route path={PATH.ERROR} element={ <Error404/> }/>*/}
