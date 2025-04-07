@@ -11,7 +11,7 @@ export const PATH = {
   HOME: '/',
   PAGE1: '/adidas',
   PAGE2: '/puma',
-  PAGE3: '/abibas',
+  PAGE3: '/nike',
   EXCEPTIONS: '*'
 } as const;
 
@@ -21,13 +21,13 @@ function App() {
       <S.Header><h1>HEADER</h1></S.Header>
       <S.Body>
         <S.NavContainer>
-          Navigation:
+          {/*Navigation:*/}
           <S.NavWrapper> <NavLink to={PATH.PAGE1}>Adidas</NavLink> </S.NavWrapper>
           <S.NavWrapper> <NavLink to={PATH.PAGE2}>Puma</NavLink> </S.NavWrapper>
           <S.NavWrapper> <NavLink to={PATH.PAGE3}>Nike</NavLink> </S.NavWrapper>
         </S.NavContainer>
         <S.Content>
-          Sneakers:
+          {/*Sneakers:*/}
           <Routes>
             <Route path={PATH.HOME} element={ <Navigate to={PATH.PAGE1}/> }/>
 
