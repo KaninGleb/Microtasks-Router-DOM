@@ -8,9 +8,9 @@ import {S} from './components/pages/_styles.ts';
 
 const PATH = {
   HOME: '/',
-  PAGE1: '/page1',
-  PAGE2: '/page2',
-  PAGE3: '/page3',
+  PAGE1: '/adidas',
+  PAGE2: '/puma',
+  PAGE3: '/abibas',
   ERROR: '/page/error',
   EXCEPTIONS: '*'
 } as const;
@@ -22,14 +22,14 @@ function App() {
       <S.Body>
         <S.NavContainer>
           Navigation:
-          <S.NavWrapper> <NavLink to={PATH.PAGE1}>Page 1</NavLink> </S.NavWrapper>
-          <S.NavWrapper> <NavLink to={PATH.PAGE2}>Page 2</NavLink> </S.NavWrapper>
-          <S.NavWrapper> <NavLink to={PATH.PAGE3}>Page 3</NavLink> </S.NavWrapper>
+          <S.NavWrapper> <NavLink to={PATH.PAGE1}>Adidas</NavLink> </S.NavWrapper>
+          <S.NavWrapper> <NavLink to={PATH.PAGE2}>Puma</NavLink> </S.NavWrapper>
+          <S.NavWrapper> <NavLink to={PATH.PAGE3}>Abibas</NavLink> </S.NavWrapper>
         </S.NavContainer>
         <S.Content>
           Sneakers:
           <Routes>
-            <Route path={PATH.HOME} element={ <Navigate to={"/page-1"}/> }/>
+            <Route path={PATH.HOME} element={ <Navigate to={PATH.HOME}/> }/>
 
             <Route path={PATH.PAGE1} element={<PageOne/>}/>
             <Route path={PATH.PAGE2} element={<PageTwo/>}/>
