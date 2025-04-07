@@ -4,13 +4,15 @@ import {PageTwo} from './components/pages/PageTwo.tsx';
 import {PageThree} from './components/pages/PageThree.tsx';
 import {Error404} from './components/pages/Error404.tsx';
 import {S} from './components/pages/_styles.ts';
+import {Model} from './components/pages/Model.tsx';
 
 
-const PATH = {
+export const PATH = {
   HOME: '/',
   PAGE1: '/adidas',
   PAGE2: '/puma',
   PAGE3: '/abibas',
+  MODEL: '/adidas/model',
   ERROR: '/page/error',
   EXCEPTIONS: '*'
 } as const;
@@ -29,11 +31,14 @@ function App() {
         <S.Content>
           Sneakers:
           <Routes>
-            <Route path={PATH.HOME} element={ <Navigate to={PATH.HOME}/> }/>
+            <Route path={PATH.HOME} element={ <Navigate to={PATH.PAGE1}/> }/>
 
             <Route path={PATH.PAGE1} element={<PageOne/>}/>
             <Route path={PATH.PAGE2} element={<PageTwo/>}/>
             <Route path={PATH.PAGE3} element={<PageThree/>}/>
+
+            <Route path={'/adidas/:id'} element={<Model/>}/>
+            {/*<Route path={'/adidas/*'} element={<Error404/>}/>*/}
 
             {/*<Route path={PATH.ERROR} element={ <Error404/> }/>*/}
             {/*<Route path={PATH.EXCEPTIONS} element={ <Navigate to={PATH.ERROR}/> }/>*/}
