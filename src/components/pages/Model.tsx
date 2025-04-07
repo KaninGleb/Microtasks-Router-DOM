@@ -1,15 +1,17 @@
 import {useParams} from 'react-router-dom';
 import {adidasModulesState, AdidasModelType} from './Adidas.tsx';
 import {pumaModelsState, PumaModelType} from './Puma.tsx';
+import {nikeModelsState, NikeModelType} from './Nike.tsx';
 
 
 type CrossModalType = {
-  [key: string]: (AdidasModelType[] | PumaModelType[]);
+  [key: string]: (AdidasModelType[] | PumaModelType[] | NikeModelType[]);
 }
 
 const crossModal: CrossModalType = {
   adidas: adidasModulesState,
   puma: pumaModelsState,
+  nike: nikeModelsState
 }
 
 export const Model = () => {
