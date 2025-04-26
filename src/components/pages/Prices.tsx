@@ -1,10 +1,9 @@
 import {useEffect, useState} from 'react';
 import {useSearchParams} from 'react-router-dom';
-import styles from './Prices.module.css';
+import s from './Prices.module.css';
 
-type Props = {}
 
-export const Prices = (props: Props) => {
+export const Prices = () => {
   const sneakers = [
     {
       manufacturer: 'Adidas',
@@ -39,39 +38,47 @@ export const Prices = (props: Props) => {
   ]
 
   const [searchParams, setSearchParams] = useSearchParams();
+  const [filteredSneakers, setFilteredSneakers] = useState(sneakers);
 
-
-
+  useEffect(() => {
+    if (searchParams.get('onSale')) {
+      setFilteredSneakers(sneakers.filter(m => m.onSale))
+    } else {
+      setFilteredSneakers(sneakers)
+    }
+  }, [searchParams]);
 
   function handleOnSale() {
-
+    setSearchParams({onSale: 'true'})
+    setFilteredSneakers(sneakers.filter(m => m.onSale))
   }
 
   function handleReset() {
-
+    setSearchParams({})
+    setFilteredSneakers(sneakers)
   }
 
   return (
-    <div>
-      <button onClick={handleOnSale} className={styles.buttonStyle}>On sale</button>
-      <button onClick={handleReset} className={styles.buttonStyle}>Reset filter</button>
+    <div className={s.pricesContainer}>
+      <button onClick={handleOnSale} className={s.buttonStyle}>On sale</button>
+      <button onClick={handleReset} className={s.buttonStyle}>Reset filter</button>
 
-      <table className={styles.tableStyle}>
+      <table className={s.tableStyle}>
         <thead>
         <tr>
-          <th className={styles.thStyle}>Manufacturer</th>
-          <th className={styles.thStyle}>Name</th>
-          <th className={styles.thStyle}>Price</th>
-          <th className={styles.thStyle}>On Sale</th>
+          <th className={s.thStyle}>Manufacturer</th>
+          <th className={s.thStyle}>Name</th>
+          <th className={s.thStyle}>Price</th>
+          <th className={s.thStyle}>On Sale</th>
         </tr>
         </thead>
         <tbody>
         {filteredSneakers.map((sneaker, index) => (
           <tr key={index}>
-            <td className={styles.tdStyle}>{sneaker.manufacturer}</td>
-            <td className={styles.tdStyle}>{sneaker.name}</td>
-            <td className={styles.tdStyle}>${sneaker.price}</td>
-            <td className={styles.tdStyle}>{sneaker.onSale ? 'Yes' : 'No'}</td>
+            <td className={s.tdStyle}>{sneaker.manufacturer}</td>
+            <td className={s.tdStyle}>{sneaker.name}</td>
+            <td className={s.tdStyle}>${sneaker.price}</td>
+            <td className={s.tdStyle}>{sneaker.onSale ? 'Yes' : 'No'}</td>
           </tr>
         ))}
         </tbody>
