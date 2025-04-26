@@ -1,13 +1,20 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import {HashRouter} from 'react-router-dom';
+import {HashRouter} from 'react-router';
+import App from './App.tsx';
 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+// Router DOM - 6.4
+// root.render(
+//   <RouterProvider router={router}/>
+// );
+
+
+// new syntaxes
 root.render(
   <HashRouter>
     <App/>
