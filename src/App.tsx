@@ -30,6 +30,10 @@ function App() {
           <S.NavWrapper> <NavLink to={PATH.PAGE4}>For wholesalers</NavLink> </S.NavWrapper>
         </S.NavContainer>
         <S.Content>
+          {/*RRD - 6.4*/}
+          {/*<Outlet/>*/}
+
+
           {/*Sneakers:*/}
           <Routes>
             <Route path={PATH.HOME} element={ <Navigate to={PATH.PAGE1}/> }/>
