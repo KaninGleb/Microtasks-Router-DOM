@@ -5,6 +5,7 @@ import {Nike} from './components/pages/Nike.tsx';
 import {Model} from './components/pages/Model.tsx';
 import {Error404} from './components/pages/Error404.tsx';
 import {S} from './components/pages/_styles.ts';
+import {Prices} from './components/pages/Prices.tsx';
 
 
 export const PATH = {
@@ -12,6 +13,7 @@ export const PATH = {
   PAGE1: '/adidas',
   PAGE2: '/puma',
   PAGE3: '/nike',
+  PAGE4: '/prices',
   EXCEPTIONS: '*'
 } as const;
 
@@ -25,6 +27,7 @@ function App() {
           <S.NavWrapper> <NavLink to={PATH.PAGE1}>Adidas</NavLink> </S.NavWrapper>
           <S.NavWrapper> <NavLink to={PATH.PAGE2}>Puma</NavLink> </S.NavWrapper>
           <S.NavWrapper> <NavLink to={PATH.PAGE3}>Nike</NavLink> </S.NavWrapper>
+          <S.NavWrapper> <NavLink to={PATH.PAGE4}>For wholesalers</NavLink> </S.NavWrapper>
         </S.NavContainer>
         <S.Content>
           {/*Sneakers:*/}
@@ -34,6 +37,7 @@ function App() {
             <Route path={PATH.PAGE1} element={<Adidas/>}/>
             <Route path={PATH.PAGE2} element={<Puma/>}/>
             <Route path={PATH.PAGE3} element={<Nike/>}/>
+            <Route path={PATH.PAGE4} element={<Prices/>}/>
 
             <Route path={'/:model/:id'} element={<Model/>}/>
 
