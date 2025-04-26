@@ -2,10 +2,13 @@ import styled from 'styled-components';
 
 
 const Header = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
     background-color: #000000;
-    width: 100%;
-    height: 100px;
-    text-align: center;
+    padding: 30px 0;
     color: white;
 `
 
