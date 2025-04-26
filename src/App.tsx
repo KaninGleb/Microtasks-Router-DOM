@@ -20,7 +20,7 @@ export const PATH = {
 function App() {
   return (
     <div>
-      <S.Header><h1>HEADER</h1></S.Header>
+      <S.Header>HEADER</S.Header>
       <S.Body>
         <S.NavContainer>
           {/*Navigation:*/}
