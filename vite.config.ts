@@ -1,8 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// Router DOM - 6.4
 export default defineConfig({
-  base: '/Microtasks-Router-DOM/',
+  base: '/',
   plugins: [react()],
 })
+
+// New syntaxes
+// https://vite.dev/config/
+// export default defineConfig({
+//   base: '/Microtasks-Router-DOM/',
+//   plugins: [react()],
+// })
