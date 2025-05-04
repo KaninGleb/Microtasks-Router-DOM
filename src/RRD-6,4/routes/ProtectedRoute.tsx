@@ -1,13 +1,18 @@
 import {ReactNode} from 'react';
 import {Navigate} from 'react-router-dom';
+import s from '../../components/pages/Prices.module.css';
+
 
 type Props = {
   children: ReactNode
 }
 
-
 export const ProtectedRoute = ({ children }: Props) => {
-  const isLoggedIn = true
+  const isLoggedIn = false
 
-  return isLoggedIn ? children : <Navigate to={'/error'}/>
+  return (
+    <div className={s.pricesContainer}>
+      {isLoggedIn ? children : <Navigate to={'/error'}/>}
+    </div>
+  )
 }
