@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {HashRouter} from 'react-router';
-import App from './App.tsx';
+import {RouterProvider} from 'react-router-dom';
+import {router} from './RRD-6,4/routes/router.tsx';
 
 
 const root = ReactDOM.createRoot(
@@ -9,17 +9,17 @@ const root = ReactDOM.createRoot(
 );
 
 // Router DOM - 6.4
-// root.render(
-//   <RouterProvider router={router}/>
-// );
-
-
-// new syntaxes
 root.render(
-  <HashRouter>
-    <App/>
-  </HashRouter>
+  <RouterProvider router={router}/>
 );
+
+
+// New syntaxes
+// root.render(
+//   <HashRouter>
+//     <App/>
+//   </HashRouter>
+// );
 
 
 // If you want to start measuring performance in your app, pass a function
