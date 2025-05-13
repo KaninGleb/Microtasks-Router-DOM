@@ -12,6 +12,7 @@ import s from '../../components/pages/Prices.module.css';
 
 
 const PATH = {
+  HOME: '/',
   ADIDAS: '/adidas',
   PUMA: '/puma',
   NIKE: '/nike',
@@ -47,7 +48,7 @@ export const PrivateRoutes = () => {
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: PATH.HOME,
     element: <App/>,
     errorElement: <Navigate to={PATH.ERROR} />,
     children: [
