@@ -1,31 +1,33 @@
-import {NavLink, Outlet} from 'react-router-dom';
+import {useNavigate, NavLink, Outlet} from 'react-router-dom';
+import {PATH} from './RRD-6,4/routes/router.tsx';
 import {S} from './components/pages/_styles.ts';
 
 
-export const PATH = {
-  HOME: '/',
-  PAGE1: '/adidas',
-  PAGE2: '/puma',
-  PAGE3: '/nike',
-  PAGE4: '/prices',
-  PROTECTED: '/protected',
-  EXCEPTIONS: '*'
-} as const;
+export const App = () => {
+  const navigate = useNavigate()
+  const navigateHandler = () => {
+    navigate(-1)
+  }
 
-function App() {
   return (
     <S.AppContainer>
       <S.Header>HEADER</S.Header>
       <S.Body>
         <S.NavContainer>
           {/*Navigation:*/}
-          <S.NavWrapper> <NavLink to={PATH.PAGE1}>Adidas</NavLink> </S.NavWrapper>
-          <S.NavWrapper> <NavLink to={PATH.PAGE2}>Puma</NavLink> </S.NavWrapper>
-          <S.NavWrapper> <NavLink to={PATH.PAGE3}>Nike</NavLink> </S.NavWrapper>
-          <S.NavWrapper> <NavLink to={PATH.PAGE4}>For wholesalers</NavLink> </S.NavWrapper>
-          <S.NavWrapper><NavLink to={PATH.PROTECTED}>Protected Page</NavLink></S.NavWrapper>
+          <S.NavWrapper> <NavLink to={PATH.ADIDAS}>Adidas</NavLink> </S.NavWrapper>
+          <S.NavWrapper> <NavLink to={PATH.PUMA}>Puma</NavLink> </S.NavWrapper>
+          <S.NavWrapper> <NavLink to={PATH.NIKE}>Nike</NavLink> </S.NavWrapper>
+          <S.NavWrapper> <NavLink to={PATH.PRICES}>For wholesalers</NavLink> </S.NavWrapper>
+          <S.NavWrapper> <NavLink to={PATH.PROTECTED}>Protected Page</NavLink> </S.NavWrapper>
         </S.NavContainer>
         <S.Content>
+          <S.HorizontalNavigation>
+            <S.HomeLink to={PATH.ADIDAS}>Home</S.HomeLink>
+            <S.BackLink onClick={navigateHandler}>Back</S.BackLink>
+          </S.HorizontalNavigation>
+
+
           {/*RRD - 6.4*/}
           <Outlet/>
 
@@ -49,5 +51,3 @@ function App() {
     </S.AppContainer>
   )
 }
-
-export default App;
