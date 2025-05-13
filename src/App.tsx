@@ -14,7 +14,7 @@ export const PATH = {
 
 function App() {
   return (
-    <div>
+    <S.AppContainer>
       <S.Header>HEADER</S.Header>
       <S.Body>
         <S.NavContainer>
@@ -46,7 +46,7 @@ function App() {
         </S.Content>
       </S.Body>
       <S.Footer>2025</S.Footer>
-    </div>
+    </S.AppContainer>
   )
 }
 
