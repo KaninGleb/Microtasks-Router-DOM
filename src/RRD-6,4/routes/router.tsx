@@ -1,13 +1,8 @@
-import {createBrowserRouter, RouteObject} from 'react-router';
+import {Navigate, Outlet} from 'react-router-dom';
+import {createBrowserRouter, type RouteObject} from 'react-router';
 import {App} from '../../App.tsx';
-import {Adidas} from '../../components/pages/Adidas.tsx';
-import {Puma} from '../../components/pages/Puma.tsx';
-import {Nike} from '../../components/pages/Nike.tsx';
-import {Prices} from '../../components/pages/Prices/Prices.tsx';
-import {Model} from '../../components/pages/Model.tsx';
-import {Login} from '../../components/pages/Login/Login.tsx';
+import {Adidas, Puma, Nike, Prices, Model, Login} from '../../components';
 import {ProtectedPage} from '../pages/ProtectedPage.tsx';
-import {Outlet, Navigate} from 'react-router-dom';
 import s from '../../components/pages/Prices/Prices.module.css';
 
 

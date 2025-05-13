@@ -1,6 +1,6 @@
 import {useNavigate, NavLink, Outlet} from 'react-router-dom';
-import {PATH} from './RRD-6,4/routes/router.tsx';
-import {S} from './components/pages/_styles.ts';
+import {PATH} from './RRD-6,4';
+import {S} from './components';
 
 
 export const App = () => {
