@@ -1,7 +1,5 @@
 import {Link} from 'react-router-dom';
-import adidasModel1 from './../../assets/adidas/adidasModel1.webp'
-import adidasModel2 from './../../assets/adidas/adidasModel2.webp'
-import adidasModel3 from './../../assets/adidas/adidasModel3.webp'
+import { adidasModel1, adidasModel2, adidasModel3 } from '../../assets';
 
 
 export type AdidasModelType = {

@@ -1,7 +1,5 @@
 import {Link} from 'react-router-dom';
-import nikeModel1 from './../../assets/nike/nikeModel1.jpg'
-import nikeModel2 from './../../assets/nike/nikeModel2.jpg'
-import nikeModel3 from './../../assets/nike/nikeModel3.jpg'
+import { nikeModel1, nikeModel2, nikeModel3 } from '../../assets';
 
 
 export type NikeModelType = {

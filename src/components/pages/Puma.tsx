@@ -1,7 +1,5 @@
 import {Link} from 'react-router-dom';
-import pumaModel1 from './../../assets/puma/pumaModel1.jpg'
-import pumaModel2 from './../../assets/puma/pumaModel2.jpg'
-import pumaModel3 from './../../assets/puma/pumaModel3.jpg'
+import { pumaModel1, pumaModel2, pumaModel3 } from '../../assets';
 
 
 export type PumaModelType = {
