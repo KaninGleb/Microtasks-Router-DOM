@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // Router DOM - 6.4
 export default defineConfig({
-  base: '/',
+  base: '/Microtasks-Router-DOM/',
   plugins: [react()],
 })
 
