@@ -1,8 +1,8 @@
 import {useParams} from 'react-router-dom';
 import {NavLink} from 'react-router';
-import {adidasModulesState, AdidasModelType} from './Adidas.tsx';
-import {pumaModelsState, PumaModelType} from './Puma.tsx';
-import {nikeModelsState, NikeModelType} from './Nike.tsx';
+import {adidasModulesState, type AdidasModelType} from './Adidas.tsx';
+import {pumaModelsState, type PumaModelType} from './Puma.tsx';
+import {nikeModelsState, type NikeModelType} from './Nike.tsx';
 import {M} from './_styles.ts';
 
 
