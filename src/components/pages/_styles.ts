@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 
+const AppContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+`
+
 const Header = styled.div`
     display: flex;
     justify-content: center;
@@ -14,6 +20,7 @@ const Header = styled.div`
 
 const Body = styled.div`
     display: flex;
+    flex: 1;
 `
 
 const NavContainer = styled.div`
@@ -57,7 +64,6 @@ const NavWrapper = styled.div`
 const Content = styled.div`
     font-size: 30px;
     color: white;
-    min-height: 400px;
     padding: 0 50px 10px;
     background-color: #282c34;
     width: 100%;
@@ -82,6 +88,7 @@ const SneakersContent = styled.div`
 `
 
 export const S = {
+  AppContainer,
   Header,
   Body,
   NavContainer,
