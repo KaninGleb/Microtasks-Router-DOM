@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 
 const AppContainer = styled.div`
@@ -69,6 +70,44 @@ const Content = styled.div`
     width: 100%;
 `
 
+const HorizontalNavigation = styled.div`
+    display: flex;
+    margin-top: 10px;
+`
+
+const HomeLink = styled(Link)`
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+`
+
+const BackLink = styled.button`
+    padding: 10px 20px;
+    background-color: #ff00b7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #980569;
+    }
+`
+
 const Footer = styled.div`
     background-color: #000000;
     width: 100%;
@@ -94,6 +133,9 @@ export const S = {
   NavContainer,
   NavWrapper,
   Content,
+  HorizontalNavigation,
+  HomeLink,
+  BackLink,
   Footer,
 }
 
