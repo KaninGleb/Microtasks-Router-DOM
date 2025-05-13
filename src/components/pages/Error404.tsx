@@ -1,4 +1,4 @@
-import s from '../../components/pages/Prices.module.css';
+import s from './Prices/Prices.module.css';
 
 
 export const Error404 = () => {
