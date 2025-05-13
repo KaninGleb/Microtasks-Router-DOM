@@ -12,7 +12,7 @@ export const ProtectedRoute = ({ children }: Props) => {
 
   return (
     <div className={s.pricesContainer}>
-      {isLoggedIn ? children : <Navigate to={'/error'}/>}
+      {isLoggedIn ? children : <Navigate to={'/login'}/>}
     </div>
   )
 }
