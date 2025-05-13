@@ -72,6 +72,7 @@ const Content = styled.div`
 
 const HorizontalNavigation = styled.div`
     display: flex;
+    gap: 10px;
     margin-top: 10px;
 `
 
