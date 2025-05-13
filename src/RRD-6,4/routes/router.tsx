@@ -1,17 +1,17 @@
 import {createBrowserRouter, RouteObject} from 'react-router';
-import App from '../../App.tsx';
+import {App} from '../../App.tsx';
 import {Adidas} from '../../components/pages/Adidas.tsx';
 import {Puma} from '../../components/pages/Puma.tsx';
 import {Nike} from '../../components/pages/Nike.tsx';
 import {Prices} from '../../components/pages/Prices.tsx';
 import {Model} from '../../components/pages/Model.tsx';
-import {ProtectedPage} from '../pages/ProtectedPage.tsx';
-import {Navigate, Outlet} from 'react-router-dom';
 import {Login} from '../../components/pages/Login/Login.tsx';
+import {ProtectedPage} from '../pages/ProtectedPage.tsx';
+import {Outlet, Navigate} from 'react-router-dom';
 import s from '../../components/pages/Prices.module.css';
 
 
-const PATH = {
+export const PATH = {
   HOME: '/',
   ADIDAS: '/adidas',
   PUMA: '/puma',
