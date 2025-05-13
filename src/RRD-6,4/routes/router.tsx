@@ -7,15 +7,15 @@ import s from '../../components/pages/Prices/Prices.module.css';
 
 
 export const PATH = {
-  HOME: '/',
-  ADIDAS: '/adidas',
-  PUMA: '/puma',
-  NIKE: '/nike',
-  PRICES: '/prices',
-  MODEL: '/:model/:id',
-  PROTECTED: '/protected',
-  ERROR: '/error',
-  LOGIN: '/login',
+  HOME: '/Microtasks-Router-DOM/',
+  ADIDAS: '/Microtasks-Router-DOM/adidas',
+  PUMA: '/Microtasks-Router-DOM/puma',
+  NIKE: '/Microtasks-Router-DOM/nike',
+  PRICES: '/Microtasks-Router-DOM/prices',
+  MODEL: '/Microtasks-Router-DOM/:model/:id',
+  PROTECTED: '/Microtasks-Router-DOM/protected',
+  ERROR: '/Microtasks-Router-DOM/error',
+  LOGIN: '/Microtasks-Router-DOM/login',
 } as const;
 
 const publicRoutes: RouteObject[] = [
